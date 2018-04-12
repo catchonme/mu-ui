@@ -1,0 +1,10 @@
+.mu-button {
+  display:inline-block;
+  width:100px;
+  height:35px;
+  color:#fff;
+  text-align: center;
+  user-select: none;
+  white-space: nowrap;
+  vertical-align: middle;
+}
