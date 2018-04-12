@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <mu-button size="small" type="success" round>
+    <mu-button size="medium" type="success" @click="log('log info')">
       这是按钮
     </mu-button>
   </div>
@@ -13,6 +13,11 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods:{
+    log(msg) {
+      console.log(msg)
     }
   }
 }
