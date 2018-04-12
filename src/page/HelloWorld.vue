@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <mu-button>
+    <mu-button size="small" type="success" round>
       这是按钮
     </mu-button>
   </div>

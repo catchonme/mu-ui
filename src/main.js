@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import MuUi from './install'
-import './style/index.css'
+import './style/index.scss'
 
 Vue.use(MuUi);
 Vue.config.productionTip = false

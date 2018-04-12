@@ -7,18 +7,27 @@
 <script>
 
   const prefixOfClass = 'mu-button';
+  const elPrefixOfClass = 'el-button-';
 
   export default {
     name: "MuButton",
     props: {
       disabled: Boolean,
       nativeType: {
+        type: String,
         default: 'button',
-        validator (value) {
-          return (['button', 'submit', 'reset'].indexOf(value) >= 0);
-        }
       },
-      long: Boolean
+      type:{
+        type: String,
+        default: 'default'
+      },
+      size: {
+        type: String,
+        default: 'medium'
+      },
+      plain: Boolean,
+      round: Boolean,
+      circle: Boolean
     },
     methods: {
       handleClick (event) {
@@ -28,9 +37,12 @@
     computed: {
       classes() {
         return [
-          `${prefixOfClass}`,
+          `${elPrefixOfClass}-${this.type}`,
+          `${elPrefixOfClass}-${this.size}`,
           {
-            [`${prefixOfClass}--long`]: this.long
+            'is-circle': this.circle,
+            'is-plain': this.plain,
+            'is-round': this.round,
           }
         ];
       }
